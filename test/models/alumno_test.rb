@@ -2,16 +2,15 @@ require 'test_helper'
 
 class AlumnoTest < ActiveSupport::TestCase
 
-def setup
+  def setup
 	@ptr=alumnos(:one)
-end
+  end
 
-test "student not null"
-	assert_not_nil(@user,'student null')
-end
+  test "campo estudiante no null"
+    assert_not_nil(@ptr.nombre,'student null')
+  end
 
-test "student not empty"
-	assert_not_empty(@ptr.nombre, 'student withput name')
-end
-
+  test "campo estudiante no vacio"
+	assert_not_empty(@ptr.nombre, 'student without name')
+  end
 end
